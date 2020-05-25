@@ -1,0 +1,22 @@
+Please capture following logs from boot up. 
+1) capture adb logs with following logs are enabled. 
+adb root 
+adb shell 
+logwrapper ip monitor & 
+logwrapper strace -f -t -v -p <netd_pid> & <-get netd_pid value through “ps -e | grep netd" 
+adb logcat -b all -v threadtime > adblog.txt
+2) tcpdump 
+adb shell tcpdump -i any -nnXSs 0 -w /data/shared/any.pcap
+3) run attached iptables_rules_routes_v2.2.bat file to get iptables/routes/rules from boot up. 
+Provide logs folder after test
+
+
+. logcat
+>>>在开发者模式中打开 wifi verbose log开关，之后执行 adb logcat -b all -v time > logcat.txt 命令抓取logcat
+2. kernel log
+>>> adb logcat -b kernel -v time > kernel.txt
+3. driver log
+adb root
+adb shell
+cnss_diag -f > /sdcard/cnss.txt
+4. sniffer log（这个需要用电脑端工具和无线网卡）
