@@ -1,0 +1,248 @@
+DUMP OF SERVICE netpolicy:　　　//网络策略管理
+
+System ready: true
+Restrict background: false
+Restrict power: false
+Device idle: false
+Metered ifaces: {}
+
+Network policies:
+
+Subscription plans:
+
+Active subscriptions:
+
+Merged subscriptions: []
+
+Policy for UIDs:
+Power save whitelist (except idle) app ids:
+
+Power save whitelist app ids:
+
+Default restrict background whitelist uids:
+
+Default restrict background whitelist uids revoked by users:
+
+Status for all known UIDs:
+
+mEventLogs (most recent first):
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+DUMP OF SERVICE netd:　// netd 各网络接口　dns解析记录　　
+
+NetworkController
+Default network: 100
+
+Networks:
+1 PHYSICAL rmnet_data0
+Required permission: SYSTEM
+No DNS servers defined
+No search domains defined
+Private DNS mode: OFF
+No Private DNS servers configured
+
+2 PHYSICAL
+Required permission: SYSTEM
+No DNS servers defined
+No search domains defined
+Private DNS mode: OFF
+No Private DNS servers configured
+
+51 DUMMY dummy0
+No DNS servers defined
+No search domains defined
+Private DNS mode: OFF
+No Private DNS servers configured
+
+99 LOCAL
+No DNS servers defined
+No search domains defined
+Private DNS mode: OFF
+No Private DNS servers configured
+
+100 PHYSICAL wlan0
+Required permission: NONE
+DNS servers: # IP (total, successes, errors, timeouts, internal errors, RTT avg, last sample)
+192.168.1.1 (35, 35, 0, 0, 0, 7ms, 2s)
+No search domains defined
+DNS parameters: sample validity = 1800s, success threshold = 25%, samples (min, max) = (8, 64)
+Private DNS mode: OPPORTUNISTIC
+Private DNS configuration (1 entries)
+192.168.1.1 name{} status{fail}
+
+
+Interface <-> last network map:
+Ifindex: 29 NetId: 100
+Ifindex: 9 NetId: 1
+
+Interface addresses:
+address: fe80::3037:2eff:fe6f:a925/64 ifindices: [9]
+address: fe80::1a01:f1ff:fe9e:3bdc/64 ifindices: [29]
+address: ::1/128 ifindices: [1]
+address: 192.168.1.105/24 ifindices: [29]
+address: 127.0.0.1/8 ifindices: [1]
+
+Dns Resolve Records
+total records=68
+rec[0]: 14:43:40 2779 9810 f*.net= <get addr info failed>
+rec[1]: 14:43:40 1950 10110 g*.com= <get addr info failed>
+rec[2]: 14:43:41 3206 10073 a*.com= <get addr info failed>
+rec[3]: 14:43:42 2985 9801 a*.com= <get addr info failed>
+rec[4]: 14:43:43 2456 10023 m*.com= <get addr info failed>
+rec[5]: 14:43:43 3298 1000 s*.com= <get addr info failed>
+rec[6]: 14:43:44 3797 10063 d*.com= <get addr info failed>
+rec[7]: 14:43:44 1541 1000 c*.com=203.*,
+rec[8]: 14:43:44 1541 1000 c*.com=203.*,
+rec[9]: 14:43:45 1541 1000 t*.com=216.*,216.*,216.*,216.*,
+rec[10]: 14:43:45 2456 10023 m*.com=108.*,
+rec[11]: 14:43:45 2985 9801 d*.com=52.*,52.*,52.*,52.*,13.*,13.*,52.*,52.*,
+rec[12]: 14:43:45 2856 10022 d*.com=52.*,52.*,52.*,52.*,13.*,13.*,52.*,52.*,
+rec[13]: 14:43:45 2764 10112 i*.com=13.*,13.*,13.*,13.*,13.*,13.*,13.*,13.*,
+rec[14]: 14:43:45 2764 10112 r*.net=161.*,
+rec[15]: 14:43:45 2985 9801 r*.com=14.*,
+rec[16]: 14:43:45 2779 9810 f*.net=58.*,
+rec[17]: 14:43:45 2876 10163 d*.com=52.*,52.*,52.*,52.*,13.*,13.*,52.*,52.*,
+rec[18]: 14:43:45 3027 10023 a*.com=203.*,203.*,203.*,203.*,203.*,203.*,203.*,203.*,203.*,203.*,203.*,
+rec[19]: 14:43:45 1541 1000 c*.com=203.*,
+rec[20]: 14:43:45 3027 10023 a*.com=216.*,216.*,216.*,216.*,172.*,216.*,172.*,172.*,216.*,172.*,172.*,172.*,
+rec[21]: 14:43:46 2456 10023 a*.com=216.*,216.*,216.*,216.*,172.*,216.*,172.*,172.*,216.*,172.*,172.*,172.*,
+rec[22]: 14:43:47 3027 10023 a*.com=216.*,216.*,216.*,216.*,172.*,216.*,172.*,172.*,216.*,172.*,172.*,172.*,
+rec[23]: 14:43:48 3027 10023 a*.com=203.*,203.*,203.*,203.*,203.*,203.*,203.*,203.*,203.*,203.*,203.*,
+rec[24]: 14:43:48 2876 10163 d*.com=52.*,52.*,52.*,52.*,13.*,13.*,52.*,52.*,
+rec[25]: 14:43:48 2456 10023 c*.com=172.*,172.*,172.*,172.*,216.*,216.*,216.*,172.*,216.*,172.*,172.*,216.*,
+rec[26]: 14:43:49 3797 10063 d*.com=161.*,161.*,161.*,161.*,
+rec[27]: 14:43:49 3954 10165 b*.com=157.*,
+rec[28]: 14:43:50 2876 10163 a*.com=13.*,13.*,13.*,13.*,13.*,13.*,35.*,13.*,
+rec[29]: 14:43:53 3954 10165 s*.net=157.*,
+rec[30]: 14:43:54 4838 10164 g*.com=157.*,
+rec[31]: 14:43:58 2764 10112 d*.com=52.*,52.*,52.*,52.*,13.*,13.*,52.*,52.*,
+rec[32]: 14:44:03 2764 10112 d*.com=52.*,52.*,52.*,52.*,13.*,13.*,52.*,52.*,
+rec[33]: 14:44:07 5408 10022 d*.com=52.*,52.*,52.*,52.*,13.*,13.*,52.*,52.*,
+rec[34]: 14:44:08 2456 10023 p*.com=172.*,216.*,216.*,216.*,172.*,216.*,172.*,172.*,216.*,172.*,172.*,172.*,
+rec[35]: 14:44:08 3027 10023 a*.com=216.*,216.*,216.*,216.*,172.*,216.*,172.*,172.*,216.*,172.*,172.*,172.*,
+rec[36]: 14:44:09 5605 10023 w*.com=172.*,216.*,172.*,172.*,172.*,172.*,216.*,216.*,216.*,172.*,216.*,172.*,
+rec[37]: 14:44:09 2456 10023 m*.com=172.*,172.*,172.*,172.*,216.*,216.*,216.*,172.*,216.*,172.*,172.*,216.*,
+rec[38]: 14:44:09 3027 10023 g*.net=203.*,203.*,203.*,
+rec[39]: 14:44:10 5706 10158 y*.com=172.*,216.*,216.*,216.*,172.*,216.*,172.*,172.*,216.*,172.*,172.*,172.*,
+rec[40]: 14:44:10 5706 10158 w*.com=172.*,216.*,172.*,172.*,172.*,172.*,216.*,216.*,216.*,172.*,216.*,172.*,
+rec[41]: 14:44:10 3027 10023 w*.com=172.*,216.*,172.*,172.*,172.*,172.*,216.*,216.*,216.*,172.*,216.*,172.*,
+rec[42]: 14:44:10 5706 10158 y*.com=172.*,216.*,216.*,216.*,172.*,216.*,172.*,172.*,216.*,172.*,172.*,172.*,
+rec[43]: 14:44:10 5706 10158 i*.com=172.*,172.*,172.*,172.*,216.*,216.*,216.*,216.*,172.*,172.*,172.*,216.*,216.*,
+rec[44]: 14:44:11 5706 10158 g*.net=203.*,203.*,203.*,
+rec[45]: 14:44:11 5706 10158 w*.com=172.*,172.*,172.*,172.*,216.*,216.*,172.*,216.*,172.*,172.*,216.*,216.*,
+rec[46]: 14:44:11 5706 10158 w*.com=203.*,203.*,203.*,
+rec[47]: 14:44:12 5983 10144 d*.com=161.*,161.*,161.*,161.*,
+rec[48]: 14:44:14 6061 10038 d*.com=13.*,35.*,13.*,13.*,13.*,13.*,13.*,13.*,
+rec[49]: 14:44:15 6272 10127 d*.com=13.*,35.*,13.*,13.*,13.*,13.*,13.*,13.*,
+rec[50]: 14:44:17 5983 10144 d*.com=161.*,161.*,161.*,161.*,
+rec[51]: 14:44:20 6224 10135 d*.com=161.*,161.*,161.*,161.*,
+rec[52]: 14:45:03 2456 10023 a*.com=172.*,172.*,172.*,216.*,216.*,216.*,172.*,216.*,172.*,172.*,216.*,172.*,
+rec[53]: 14:45:04 6664 9801 d*.com=13.*,35.*,13.*,13.*,13.*,13.*,13.*,13.*,
+rec[54]: 14:45:04 6664 9801 r*.com=14.*,
+rec[55]: 14:45:04 6664 9801 a*.com=47.*,
+rec[56]: 14:45:04 2456 10023 p*.com=172.*,172.*,216.*,216.*,216.*,172.*,216.*,172.*,172.*,216.*,172.*,172.*,
+rec[57]: 14:45:04 3027 10023 h*.com=74.*,74.*,74.*,74.*,74.*,74.*,
+rec[58]: 14:45:04 6786 10022 d*.com=13.*,35.*,13.*,13.*,13.*,13.*,13.*,13.*,
+rec[59]: 14:45:05 2456 10023 w*.com=172.*,216.*,172.*,172.*,172.*,172.*,216.*,216.*,216.*,172.*,216.*,172.*,
+rec[60]: 14:45:17 2876 10163 d*.com=52.*,52.*,13.*,52.*,52.*,52.*,35.*,52.*,
+rec[61]: 14:45:42 3496 10033 a*.com=123.*,
+rec[62]: 14:45:42 3496 10033 a*.com=123.*,
+rec[63]: 14:47:33 2764 10112 d*.com=13.*,52.*,35.*,13.*,13.*,35.*,13.*,52.*,
+rec[64]: 14:47:49 2876 10163 a*.com=13.*,35.*,35.*,13.*,13.*,13.*,35.*,35.*,
+rec[65]: 14:48:08 2456 10023 p*.com=172.*,216.*,216.*,216.*,172.*,216.*,172.*,172.*,216.*,172.*,172.*,172.*,
+rec[66]: 14:48:12 7473 10086 f*.net=58.*,
+rec[67]: 14:48:42 3206 10073 p*.com=216.*,216.*,172.*,216.*,172.*,172.*,216.*,216.*,172.*,172.*,172.*,172.*,
+
+TrafficController
+BPF module status: ON
+
+mCookieTagMap status: OK
+mUidCounterSetMap status: OK
+mAppUidStatsMap status: OK
+mUidStatsMap status: OK
+mTagStatsMap status: OK
+mIfaceIndexNameMap status: OK
+mIfaceStatsMap status: OK
+mDozableUidMap status: OK
+mStandbyUidMap status: OK
+mPowerSaveUidMap status: OK
+
+Cgroup ingress program status: OK
+Cgroup egress program status: OK
+xt_bpf ingress program status: OK
+xt_bpf egress program status: OK
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+DUMP OF SERVICE netstats:　　// 网络状态　
+Active interfaces:
+iface=wlan0 ident=[{type=WIFI, subType=COMBINED, networkId="ZafirTab-5G", metered=false, defaultNetwork=true}]
+Active UID interfaces:
+iface=wlan0 ident=[{type=WIFI, subType=COMBINED, networkId="ZafirTab-5G", metered=false, defaultNetwork=true}]
+Top openSession callers (uid=count):
+
+Dev stats:
+Pending bytes: 226
+History since boot:
+ident=[{type=WIFI, subType=COMBINED, networkId="ZafirTab-5G", metered=false, defaultNetwork=false}] uid=-1 set=ALL tag=0x0
+NetworkStatsHistory: bucketDuration=3600
+st=1553677200 rb=91 rp=1 tb=135 tp=2 op=0
+Xt stats:
+Pending bytes: 226
+History since boot:
+ident=[{type=WIFI, subType=COMBINED, networkId="ZafirTab-5G", metered=false, defaultNetwork=false}] uid=-1 set=ALL tag=0x0
+NetworkStatsHistory: bucketDuration=3600
+st=1553677200 rb=91 rp=1 tb=135 tp=2 op=0
+
+
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+DUMP OF SERVICE network_management:　// framework 与netd　交互
+NetworkManagementService NativeDaemonConnector Log:
+2019-03-27T14:43:33.872 - SND -> {1 interface list}
+2019-03-27T14:43:33.873 - RCV <- {110 1 bond0}
+2019-03-27T14:43:33.873 - RCV <- {110 1 dummy0}
+2019-03-27T14:43:33.873 - RCV <- {110 1 ip6_vti0}
+2019-03-27T14:43:33.873 - RCV <- {110 1 ip6tnl0}
+2019-03-27T14:43:33.873 - RCV <- {110 1 ip_vti0}
+
+Pending requests:
+
+Bandwidth control enabled: true
+mMobileActivityFromRadio=false mLastPowerStateFromRadio=1
+mNetworkActive=true
+Active quota ifaces: {}
+Active alert ifaces: {}
+Data saver mode: false
+UID bandwith control blacklist rule: []
+UID bandwith control whitelist rule: []
+UID firewall rule: []
+UID firewall standby chain enabled: true
+UID firewall standby rule: [10166:2,10168:2,10169:2,10170:2,10172:2,10173:2,10174:2,10176:2,10177:2,10178:2]
+UID firewall dozable chain enabled: false
+UID firewall dozable rule: []
+UID firewall powersave chain enabled: false
+UID firewall powersave rule: []
+Idle timers:
+wlan0:
+timeout=15 type=1 networkCount=1
+Firewall enabled: false
+Netd service status: alive
+
+
+
+
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+DUMP OF SERVICE network_score:　　//　网络评分
+WifiNetworkScoreCache (android/1000)
+All score curves:
+ScoredNetwork{networkKey=WifiKey[SSID="DIRECT-PPMI-20160922DOFOmsZV",BSSID=02:c2:c6:ed:59:d1], rssiCurve=null, meteredHint=false}
+ScoredNetwork{networkKey=WifiKey[SSID="MIUI_5G",BSSID=2c:fd:a1:63:54:1c], rssiCurve=null, meteredHint=false}
+ScoredNetwork{networkKey=WifiKey[SSID="MIUI_Xiaomi",BSSID=34:ce:00:6b:b1:1f], rssiCurve=null, meteredHint=false}
+ScoredNetwork{networkKey=WifiKey[SSID="MIOT",BSSID=38:17:c3:b0:61:13], rssiCurve=null, meteredHint=false}
+ScoredNetwork{networkKey=WifiKey[SSID="MIPublic",BSSID=38:17:c3:b0:4f:92], rssiCurve=null, meteredHint=false}
+
