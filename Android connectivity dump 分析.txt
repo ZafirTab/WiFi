@@ -246,3 +246,205 @@ ScoredNetwork{networkKey=WifiKey[SSID="MIUI_Xiaomi",BSSID=34:ce:00:6b:b1:1f], rs
 ScoredNetwork{networkKey=WifiKey[SSID="MIOT",BSSID=38:17:c3:b0:61:13], rssiCurve=null, meteredHint=false}
 ScoredNetwork{networkKey=WifiKey[SSID="MIPublic",BSSID=38:17:c3:b0:4f:92], rssiCurve=null, meteredHint=false}
 
+
+WiFi
+
+wifi
+DUMP OF SERVICE wifi:
+Wi-Fi is disabled // wifi状态
+
+Verbose logging is off　// Verbose , framework/supplicant 吐更多log
+
+Stay-awake conditions: 0　　
+
+mInIdleMode false
+
+mScanPending false
+
+WifiController: // WifiController is the class used to manage wifi state for various operating modes (normal, airplane, wifi hotspot, etc.). 分析wifi各工作模式之间的切换
+
+curState=StaDisabledState
+
+mPersistWifiState 0
+
+mAirplaneModeOn false //飞行模式
+
+mTxPkts 3287
+
+mRxPkts 247
+
+mDataActivity 3 // 通过tx/rx 计算数据动态
+
+mRegisteredCallbacks 1　　// 来自　 WifiTrafficPoller 　　Polls for traffic stats and notifies the clients
+
+mMulticastEnabled 18 mMulticastDisabled 18 Multicast Locks held: //WifiMulticastLockManager.java
+
+Dump of WifiActiveModeWarden
+
+Current wifi mode: ClientModeActiveState //
+
+NumActiveModeManagers: 2 //当前的工作模式，STA/SAP
+
+Dump of SoftApManager
+
+current StateMachine mode: StartedState
+
+mApInterfaceName: wlan1 // SAP使用的interface，Qualcomm平台支持STA/SAP共存，一般用wlan1，否则服用wlan0;MTK平台一般用softap0
+
+mIfaceIsUp: true
+
+mMode: 1 // 1 Interface IP mode for tethering; 2 Interface IP mode for Local Only Hotspot.
+
+mCountryCode: CN
+
+mApConfig.SSID: F1-SAP
+
+mApConfig.apBand: 0 // 0->2.4G 1 -> 5G 2 -> 2.4G/5G
+
+mApConfig.hiddenSSID: false // ssid是否隐藏
+
+mNumAssociatedStations: 0　　// 当前热点关联的设备
+
+mTimeoutEnabled: true　　// 是否开启长时间无设备连接，自动关闭热点,AOSP默认给的时间是１０分钟
+
+mReportedFrequency: 2437 // 当前ＳＡＰ所使用的信道
+
+mReportedBandwidth: 2 // 带宽
+
+mStartTimestamp: 92921
+
+Dump of ClientModeManager
+
+current StateMachine mode: StartedState
+
+mClientInterfaceName: wlan0
+
+mIfaceIsUp: true
+
+WifiClientModeImpl:　// 原来的WifiStateMachine,分析wifi的连接、断开、漫游操作等。各状态之间如何跳转。
+
+curState=ConnectedState // wifi当前连接的状态
+
+SupplicantStateTracker: // 记录wpa_supplicant的状态 UninitializedState HandshakeState ScanState CompletedState DisconnectedState
+
+curState=CompletedState // wpa_supplicant当前处于的状态
+
+mAuthFailureInSupplicantBroadcast false　　// SupplicantStateTracker.java 追踪
+
+mAuthFailureReason 0 // 0 标示认证时没有错误　1 表示认证超时　2 表示密码错误 3 表示EAP失败
+
+mNetworksDisabledDuringConnect false // Tracks if networks have been disabled during a connection
+
+mLinkProperties // 链路参数 主要是网络相关
+
+mWifiInfo //wifi信息　信息较全，
+
+mDhcpResults　//dhcp结果
+
+mNetworkInfo // 网络信息
+
+WifiNetworkFactory // wifi网络请求记录
+
+Wlan Wake Reasons: // wifi 模块　唤醒记录
+
+Dump of WifiConfigManager // ap 配置信息 如ap为什么被禁止自动连接等
+
+Dump of WifiConfigStore // xml保存记录
+
+Chipset information //wlan chip信息
+
+// 后面的dump可以稍微看下
+
+Dump of WifiConnectivityManager //manages all the connectivity related scanning activities. 内含评分机制
+
+WifiMetrics: // wifi相关统计
+
+mConnectionEvents: //wifi连接事件
+
+StaEventList: // sta统计事件
+
+Dump of WifiNetworkSuggestionsManager //　网络建议
+
+wifiaware
+DUMP OF SERVICE wifiaware:
+
+wificond
+DUMP OF SERVICE wificond:
+
+wifip2p
+DUMP OF SERVICE wifip2p:
+
+wifirtt
+DUMP OF SERVICE wifirtt:
+
+wifiscanner
+DUMP OF SERVICE wifiscanner:
+
+Latest scan results: // native 扫描结果
+
+Latest native scan results: // 关于age的扫描问题
+
+连接
+
+connectivity
+DUMP OF SERVICE connectivity:
+
+Current Networks: //　当前网络
+
+Status for known UIDs: // 各uid的网络状态
+
+Network Requests: //网络请求记录
+
+Tethering: //热点相关，之前分析过
+
+mNetworkRequestInfoLogs (most recent first):
+
+NetworkStackClient logs: 　//　网络栈
+
+DUMP OF SERVICE network_stack //网络栈 dump
+
+connectivity packet log: // 网络交互包
+
+Validation logs (most recent first):　// 网络连通性判断
+
+connmetrics
+DUMP OF SERVICE connmetrics: 　//网络认证相关
+
+metrics events:
+
+dns/connect events:
+
+network statistics:
+
+网络
+
+netd
+NetworkController
+
+TrafficController　// bpf map
+
+Log: // netd操作log
+
+netd_listener
+DUMP OF SERVICE netd_listener:
+
+netpolicy
+DUMP OF SERVICE netpolicy: 　//网络策略相关
+
+mEventLogs (most recent first): //应用无法上网
+
+mNetworkBlockedLogs (most recent first):
+
+mUidStateChangeLogs (most recent first): ???
+
+netstats
+DUMP OF SERVICE netstats: //NetworkStatsHistory.java
+
+network_management
+DUMP OF SERVICE network_management: //各种网络策略
+
+network_score
+network_stack
+network_time_update_service
+network_watchlist
+
